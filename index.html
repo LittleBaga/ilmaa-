@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <title>Baga</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Webshop">
+  <meta name="keywords" content="Shoes, Sneakers, Heels">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+  <i class="em em-some-emoji"></i>
+
+<!-- Ladda CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css">
+    <link rel="stylesheet" type="text/css" href="css/store.css">
+    
+</head>
+<body>
+
+<!-- Topp -->
+<header>
+  <h1>Little Baga</h1>
+  <h2>Store</h2>
+</header>
+
+<!-- Meny -->
+<div id="navbar" class="navbar">
+  <a href="index.html">Hem</a>
+  <a href="bilder.html">Bilder</a>
+  <a href="kontakt.html">Kontakt</a>
+  <a href="om_oss.html">Om oss</a>
+</div>
+
+<!-- Aside -->
+<aside>
+  <form role="search">
+    <div class="search-control">
+        <input type="search" id="site-search" name="q"
+               placeholder="Search"
+               aria-label="Search through site content">
+        <button>Search</button>
+    </div>
+</form>
+</aside>
+
+<!-- Slideshow -->
+
+<div class="slideshow-container">
+
+<div class="mySlides animate-right">
+  <div class="numbertext">1 / 3</div>
+  <img src="bilder/shoe1.jpg" alt="black/red heel" style="width:100%">
+  <div class="text">Sko1</div>
+</div>
+
+<div class="mySlides animate-right">
+  <div class="numbertext">2 / 3</div>
+  <img src="bilder/shoe2.jpg" alt="white sneakers" style="width:100%">
+  <div class="text">Sko2</div>
+</div>
+
+<div class="mySlides animate-right">
+  <div class="numbertext">3 / 3</div>
+  <img src="bilder/shoe3.jpg" alt="black heels" style="width:100%">
+  <div class="text">Sko3</div>
+</div>
+
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<!-- Visa Slideshow -->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}   
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"; 
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+<br>
+<br>
+<br>
+
+
+<!-- Produkter -->
+<section class="products">
+
+  <article class="product-card">
+    <article class="product-image">
+      <img src="bilder/shoe1.jpg" alt="black/red heel">
+    </article>
+    <article class="product-info">
+      <h5>Heels</h5>
+      <h6>99.99kr</h6>  
+    </article>
+  </article>
+
+ <article class="product-card">
+    <article class="product-image">
+      <img src="bilder/shoe2.jpg" alt="white sneakers">
+    </article>
+    <article class="product-info">
+      <h5>Sneakers</h5>
+      <h6>99.99kr</h6>
+    </article>
+  </article>
+
+ <article class="product-card">
+    <article class="product-image">
+      <img src="bilder/shoe3.jpg" alt="Black heels">
+    </article>
+    <article class="product-info">
+      <h5>Heels</h5>
+      <h6>99.99kr</h6>
+    </article>
+  </article>
+
+
+  <article class="product-card">
+    <article class="product-image">
+      <img src="bilder/shoe4.jpg" alt="black sneakers">
+    </article>
+    <article class="product-info">
+      <h5>Sneakers</h5>
+      <h6>99.99kr</h6>
+    </article>
+  </article>
+
+  <!-- Mer produkter -->
+
+</section>
+ 
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<!-- Botten -->
+<footer>
+  <h2>© 2018 <a href="mailto:ilmce@hotmail.com?Subject=Hello!%20Schysst%20Hemsida" target="_top">Ilma Curic</a></h2>
+</footer>
+
+</body>
+</html>
+

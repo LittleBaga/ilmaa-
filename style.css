@@ -1,0 +1,63 @@
+/* Topp/logo Titel */
+header {
+    padding: 60px;
+    text-align: center;
+    background: rgb(51, 133, 136);
+    color: white;
+}
+
+/* Meny bar */
+.navbar {
+    display: flex;
+    background-color: palevioletred;
+    z-index: 500;
+}
+
+/* Meny färg */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Meny färg med mouse-hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Botten */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+footer a:hover {
+   color: red; 
+}
+
+/* Fixed meny */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.search-control > input,
+.search-control > button {
+    background-color: pink;
+    color: darkgreen;
+    font-size: 1rem;
+}
+
+input:focus {
+    background-color: gold !important;
+    color: black;
+    }
+
+a:focus {outline:solid;}    
